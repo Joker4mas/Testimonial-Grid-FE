@@ -16,6 +16,46 @@
 
 }
 
+.barlow-semi-condensed-thin {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.barlow-semi-condensed-extralight {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.barlow-semi-condensed-light {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.barlow-semi-condensed-regular {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barlow-semi-condensed-medium {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.barlow-semi-condensed-semibold {
+    font-family: "Barlow Semi Condensed", serif;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -27,13 +67,12 @@
 }
 
 body {
-    /* 3. Add accessible line-height */
-    /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
     display: grid;
-    place-content: content;
+    place-items: center;
+    place-content: center;
     min-height: 100vh;
-    font-family: "Montserrat", serif;
+    padding: 1rem 0;
     background-color: var(--LightGray);
 
 }
@@ -67,8 +106,6 @@ main {
     display: grid;
     gap: 1.5rem;
     width: min(95%, 80rem);
-    padding-block: 2rem;
-    margin-inline: auto;
 }
 
 @media (min-width: 50em) {
@@ -85,6 +122,10 @@ main {
         grid-column: 4;
         grid-row: 1 / span 2;
     }
+
+    .clifford .quotes {
+        min-height: 10%;
+    }
 }
 
 .bg-white {
@@ -99,69 +140,64 @@ main {
 
 .clifford .quotes {
     position: absolute;
-    height: 20vh;
-    top: 0;
-    right: 4rem;
+    min-height: 30%;
+    top: .5rem;
+    right: 3rem;
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
 }
 
-.clifford .card-header {
-    z-index: 1;
-}
 
 .clifford span {
     z-index: 1;
 }
 
-.clifford .card-header p {
-    color: var(--LightGray);
+.White-text {
+    color: var(--White);
 }
 
 .patrick {
     background-color: var(--VeryDarkBlackishBlue);
-    color: var(--White);
 }
-
 
 .walter {
     background-color: var(--VeryDarkGrayishBlue);
-    color: var(--White);
 }
 
 .details-container {
     display: grid;
     align-items: center;
-    gap: .5rem;
-    padding: 1.5rem;
-    width: 100%;
-    border-radius: 1rem;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: .5rem;
 }
 
-.details-container p {
-    font-size: small;
+.text {
+    font-size: 1em;
     color: var(--LightGray);
-    font-weight: bold;
 }
 
 .card-header {
     display: flex;
     flex-direction: row;
+    width: fit-content;
+    gap: .7rem;
     align-items: center;
-    justify-content: flex-start;
-    gap: .5rem;
+}
+
+.card-header p {
+    font-size: smaller;
+    color: var(--LightGray);
 }
 
 .card-header img {
+    width: 2rem;
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255, 0.5);
 }
 
-.bold-text {
-    font-size: 1.2em;
-    font-weight: bold;
-}
+
 
 
 
