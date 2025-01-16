@@ -7,6 +7,7 @@
     --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
     --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
     --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
 
     /* ### Neutral */
 
@@ -27,9 +28,14 @@
 
 body {
     /* 3. Add accessible line-height */
-    line-height: 1.5;
     /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+    display: grid;
+    place-content: content;
+    min-height: 100vh;
+    font-family: "Montserrat", serif;
+    background-color: var(--LightGray);
+
 }
 
 /* 5. Improve media defaults */
@@ -57,17 +63,105 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
 
+main {
+    display: grid;
+    gap: 1.5rem;
+    width: min(95%, 80rem);
+    padding-block: 2rem;
+    margin-inline: auto;
+}
+
+@media (min-width: 50em) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-cols-span-2 {
+        grid-column: span 2;
+    }
 
 
+    .kira {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
+}
+
+.bg-white {
+    background-color: var(--White);
+}
+
+.clifford {
+    position: relative;
+    background-color: var(--ModerateViolet);
+    color: var(--White);
+}
+
+.clifford .quotes {
+    position: absolute;
+    height: 20vh;
+    top: 0;
+    right: 4rem;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.clifford .card-header {
+    z-index: 1;
+}
+
+.clifford span {
+    z-index: 1;
+}
+
+.clifford .card-header p {
+    color: var(--LightGray);
+}
+
+.patrick {
+    background-color: var(--VeryDarkBlackishBlue);
+    color: var(--White);
+}
 
 
+.walter {
+    background-color: var(--VeryDarkGrayishBlue);
+    color: var(--White);
+}
 
+.details-container {
+    display: grid;
+    align-items: center;
+    gap: .5rem;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 1rem;
+}
 
+.details-container p {
+    font-size: small;
+    color: var(--LightGray);
+    font-weight: bold;
+}
 
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
 
+.card-header img {
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255, 0.5);
+}
 
-
-
+.bold-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
 
 
 
